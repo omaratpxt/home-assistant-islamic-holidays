@@ -34,6 +34,15 @@ config/
 
 Restart Home Assistant.
 
+## Maintainers (CI and HACS default inclusion)
+
+The [HACS Action](https://github.com/hacs/action) and [default repository checks](https://hacs.xyz/docs/publish/include/) expect:
+
+1. **Brand images** in `custom_components/islamic_holidays/brand/icon.png` (and optionally `logo.png`). These must be **committed** to the repo; HACS does not use only the CDN fallback unless your domain exists in [home-assistant/brands](https://github.com/home-assistant/brands).
+2. **GitHub repository topics** (Settings → General → Topics). They cannot be set from files inside the repo. Add at least a few meaningful topics, for example: `home-assistant`, `hacs-integration`, `integration`, `islamic-calendar`, `calendar`.
+
+For inclusion in the default HACS store you also need **Hassfest** in GitHub Actions and a **GitHub Release**; see the [HACS publish docs](https://hacs.xyz/docs/publish/include/).
+
 ## Configuration
 
 1. **Settings** → **Devices & services** → **Add integration**
@@ -52,7 +61,7 @@ The calendar covers **24 consecutive Gregorian months**, starting **12 months be
 
 - Calendar data: [AlAdhan / Islamic Network](https://aladhan.com/)
 - Layout inspired by [home-assistant-nayax](https://github.com/alpenava/home-assistant-nayax)
-- Integration **icon** and **logo** are the official Home Assistant [Brands](https://github.com/home-assistant/brands) assets for the core **Islamic Prayer Times** integration (`integration/islamic_prayer_times`), mirrored from the CDN so HACS/Home Assistant can load them locally: [icon](https://brands.home-assistant.io/_/integration/islamic_prayer_times/icon.png), [logo](https://brands.home-assistant.io/_/integration/islamic_prayer_times/logo.png). No separate entry was added under `brands/` for this custom integration.
+- Integration **icon** and **logo** in `custom_components/islamic_holidays/brand/` are based on the official Home Assistant [Brands](https://github.com/home-assistant/brands) assets for the core **Islamic Prayer Times** integration (`integration/islamic_prayer_times`), from the CDN: [icon](https://brands.home-assistant.io/_/integration/islamic_prayer_times/icon.png), [logo](https://brands.home-assistant.io/_/integration/islamic_prayer_times/logo.png). No separate entry was added under `brands/` for this custom integration.
 
 ## License
 
