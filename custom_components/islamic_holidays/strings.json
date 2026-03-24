@@ -1,0 +1,34 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Islamic Holidays",
+        "description": "Calendar data comes from the Islamic Network AlAdhan API (computed Hijri dates).",
+        "data": {
+          "calendar_name": "Calendar name",
+          "hijri_adjustment": "Hijri adjustment (days, passed to AlAdhan API)",
+          "holiday_filter": "Which holidays to show"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach AlAdhan API",
+      "unknown": "Unexpected error"
+    },
+    "abort": {
+      "already_configured": "This integration is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Islamic Holidays options",
+        "data": {
+          "update_interval_hours": "Refresh interval (hours)",
+          "holiday_filter": "Which holidays to show",
+          "hijri_adjustment": "Hijri adjustment (days)"
+        }
+      }
+    }
+  }
+}
